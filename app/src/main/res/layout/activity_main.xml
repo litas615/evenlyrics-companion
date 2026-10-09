@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Top Brand Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EvenLyrics Companion"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.02"
+                    android:textColor="@color/accent_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Even G2 智慧眼鏡 · 即時歌詞中繼服務"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_secondary" />
+            </LinearLayout>
+
+            <!-- G2 Pulse Dot -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="● G2 HUD"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/accent_green"
+                android:background="@drawable/bg_pill_status"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp" />
+        </LinearLayout>
+
+        <!-- Card 1: Permissions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_cyber"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1. 媒體與通知權限"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+
+                <TextView
+                    android:id="@+id/tvPermissionPill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="檢查中"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_secondary"
+                    android:background="@drawable/bg_pill_status"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPermissionStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="檢查權限中..."
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary" />
+
+            <Button
+                android:id="@+id/btnPermission"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:text="🔑 前往啟用通知存取權限"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/btn_text_dark"
+                android:background="@drawable/btn_primary_cyber"
+                android:stateListAnimator="@null" />
+        </LinearLayout>
+
+        <!-- Card 2: Local Server Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_cyber"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. 本機中繼服務 (127.0.0.1:5288)"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tvServerStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="準備啟動..."
+                android:textSize="13sp"
+                android:lineSpacingExtra="2dp"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+        <!-- Card 3: Music Detection & Demo Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_cyber"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="3. 目前偵測音樂"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+
+                <TextView
+                    android:id="@+id/tvTrackStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⏸ 待命中"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:background="@drawable/bg_pill_status"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTrackTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="尚未偵測到歌曲"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tvTrackArtist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="請開啟 YouTube Music 或 Spotify 播放歌曲"
+                android:textSize="13sp"
+                android:textColor="@color/accent_green" />
+
+            <!-- Test HUD Button -->
+            <Button
+                android:id="@+id/btnTestLyrics"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="14dp"
+                android:text="🕶️ 發送示範歌詞至眼鏡 (Test HUD)"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/accent_green"
+                android:background="@drawable/btn_secondary_outline"
+                android:stateListAnimator="@null" />
+        </LinearLayout>
+
+        <!-- Card 4: Tips -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_cyber"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💡 使用說明"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="1. 啟用通知存取權限後，服務會在背景自動讀取音樂進度。\n2. 在手機 Even Hub 開啟 EvenLyrics，戴上 Even G2 眼鏡。\n3. 播歌時繁體歌詞自動浮現在鏡片視野邊緣，無須亮起手機螢幕。\n4. 雙擊鏡腿可隨時呼叫原生退出對話框。"
+                android:textSize="12sp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
